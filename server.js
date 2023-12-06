@@ -1,5 +1,5 @@
 import express from 'express';
-import exphbs from 'express-handlebars';
+import exhbs from 'express-handlebars';
 import 'dotenv/config'
 import session, { Store } from 'express-session';
 import db from './config/connection.js';
@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Initialize Handlebar.js
-const hbs = exphbs.create();
+const hbs = exhbs.create();
 
 const sess = {
   secret: process.env.SECRET,
