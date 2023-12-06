@@ -1,5 +1,5 @@
 import express from 'express';
-import exphbs from 'express-handlebars'
+import exphbs from 'express-handlebars';
 import 'dotenv/config'
 import session, { Store } from 'express-session';
 import db from './config/connection.js';
@@ -7,10 +7,15 @@ import routeLoader from './lib/routeLoader.js';
 import { User, Post, Comment } from './lib/models/index.js'
 import helpers from './lib/helpers.js';
 
+// Initialize Sequelize
 const SequelizeStore = connectSequelize(Store);
 
+// Intialize express.js
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Initialize Handlebar.js
+const hbs = exphbs.create();
 
 const sess = {
   secret: process.env.SECRET,
