@@ -15,7 +15,7 @@ mv .env.example .env
 Clone the repository:
 
 ``` sh
-git clone https://github.com/cbbartlett/E-Commerce-Backend
+git clone https://github.com/cbbartlett/tech-blog
 ```
 
 Install dependencies:
